@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nguyen Ngoc Khiet - Software Engineering student at FPT University and full stack developer (Java, Spring Boot, React, TypeScript).">
   <title>Portfolio NK</title>
+  <link rel="icon" type="image/png" href="./img/NNK.png">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -17,89 +19,239 @@
       <nav>
         <ul>
           <li>
-            <a href="#">
+            <a href="#home">
               <i class="fa-solid fa-house"></i>
               <span>Home</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#about">
               <i class="fa-solid fa-user"></i>
               <span>About</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#projects">
               <i class="fa-solid fa-briefcase"></i>
               <span>Project</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-blog"></i>
-              <span>Blog</span>
+          <!-- chỉ hiện trong menu hamburger (màn 1000px), vì lúc đó nút Contact Me bị ẩn -->
+          <li class="nav-contact">
+            <a href="#contact">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Contact</span>
             </a>
           </li>
         </ul>
       </nav>
       <div class="contacts">
         <!-- thẻ span được viết bên dưới có 3 tác dụng: tách biệt với phần tử icon, dễ styling, linh hoạt để phát triển code sau này  -->
-        <button class="button contact">
+        <a href="#contact" class="button contact">
           Contact Me
           <!-- thẻ <i> bình thường sẽ dùng để in nghiên content bên trong, nhưng trường hợp này dùng để thêm icon -->
           <i class="fa-solid fa-handshake"></i>
-        </button>
+        </a>
         <!-- chỉ xuất hiện ở màn 1000px -->
-        <div class="bar">
+        <button class="bar" type="button" aria-label="Open menu" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
-        </div>
+        </button>
       </div>
-      
+
     </header>
-    <main class="home">
+    <main class="home" id="home">
       <div class="home_content">
         <div class="introduction">
           <h1>Hi. <span>It's Khiet</span></h1>
-          <h2 class="content2">Full Stack <strong>Developer</strong></h2>
+          <h2 class="content2">Software Engineering Student · Full Stack <strong>Developer</strong></h2>
         </div>
-        <h3 class="description">I'm a <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore earum ullam facere quaerat est dicta architecto tempora, eveniet non temporibus, at molestiae fuga voluptatem dignissimos laudantium voluptate rem tempore in.</p></h3>
-        <div class="button_wrapper"> 
-          <button class="button start"> <i class="fa-solid fa-rocket"></i>
+        <div class="description">
+          <p>I'm a software engineering student at FPT University who enjoys building complete products, from the database and Spring Boot APIs to React interfaces. I like turning real-world workflows, like hotel front desks and horse transport bookings, into tools people can actually use.</p>
+        </div>
+        <div class="button_wrapper">
+          <a href="#contact" class="button start"> <i class="fa-solid fa-rocket"></i>
             Let's Start
-          </button>
-          <button class="button readMore"> <i class="fa-solid fa-book"></i>
+          </a>
+          <a href="#about" class="button readMore"> <i class="fa-solid fa-book"></i>
             Read more
-          </button>
+          </a>
         </div>
         <div class="features">
           <div class="feature">
-            <i class="fas fa-palette feature-icon"></i>
-            <h3>Design Tools</h3>
-            <p>Learn popular design tools</p>
+            <i class="fas fa-server feature-icon"></i>
+            <h3>Backend</h3>
+            <p>Java, Spring Boot, SQL Server, PostgreSQL</p>
           </div>
           <div class="feature">
             <i class="fas fa-code feature-icon"></i>
-            <h3>Coding</h3>
-            <p>Basic of HTML & CSS</p>
+            <h3>Frontend</h3>
+            <p>React, TypeScript, Tailwind CSS, HTML/CSS/JS</p>
           </div>
           <div class="feature">
-            <i class="fas fa-users feature-icon"></i>
-            <h3>Community</h3>
-            <p>Join our design community</p>
+            <i class="fas fa-lightbulb feature-icon"></i>
+            <h3>Product mindset</h3>
+            <p>From spec to tested, deployed app</p>
           </div>
         </div>
       </div>
-      <img class="Khiet" src="./img/NNK.png" alt="Personal_img">
+      <img class="Khiet" src="./img/NNK.png" alt="Nguyen Ngoc Khiet">
     </main>
+
+    <!-- ----------------------------------------------------about------------------------------ -->
+    <section id="about">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about_grid">
+        <p class="about_text">I'm Nguyen Ngoc Khiet, based in Vietnam. I started with HTML &amp; CSS and grew into full-stack development through university projects and real apps for small businesses. I care about clean structure, tests that matter, and interfaces that feel simple.</p>
+        <div class="card education">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div>
+            <h3>FPT University</h3>
+            <p>Software Engineering</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------skills------------------------------ -->
+    <section id="skills">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <div class="skills_grid">
+        <div class="card">
+          <h3><i class="fa-solid fa-terminal"></i> Languages</h3>
+          <ul class="tags">
+            <li>Java</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>HTML</li><li>CSS</li><li>Python</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-server"></i> Backend</h3>
+          <ul class="tags">
+            <li>Spring Boot</li><li>Thymeleaf</li><li>Hibernate/JPA</li><li>REST API</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-display"></i> Frontend</h3>
+          <ul class="tags">
+            <li>React</li><li>Vite</li><li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-database"></i> Database</h3>
+          <ul class="tags">
+            <li>SQL Server</li><li>PostgreSQL (Supabase)</li><li>IndexedDB (Dexie)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+          <ul class="tags">
+            <li>Git/GitHub</li><li>Vercel</li><li>Maven</li><li>Vitest</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------projects------------------------------ -->
+    <section id="projects">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <div class="projects_grid">
+        <article class="card project">
+          <div class="project_head">
+            <h3>My An Hotel</h3>
+            <span class="badge">Private</span>
+          </div>
+          <p>Hotel management app (MVP) for a real family hotel: front-desk check-in, bookings calendar, room rates, guest declarations and export. Works offline as a PWA and syncs with Supabase.</p>
+          <ul class="tags">
+            <li>React</li><li>TypeScript</li><li>Tailwind</li><li>Supabase/PostgreSQL</li><li>PWA</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <div class="project_head">
+            <h3>Racehorse Transport</h3>
+          </div>
+          <p>Booking and management platform for racehorse transport, with a Spring Boot N-layer backend and a React frontend talking through a documented API contract.</p>
+          <ul class="tags">
+            <li>Java</li><li>Spring Boot</li><li>SQL Server</li><li>React</li><li>TypeScript</li>
+          </ul>
+          <div class="project_links">
+            <a href="https://swp-racehorse-transport-sigma.vercel.app" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            <a href="https://github.com/khietnn/SWP_RacehorseTransport" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project_head">
+            <h3>Thegioihoatuoi</h3>
+            <span class="badge">Private</span>
+          </div>
+          <p>Online flower shop with customer and admin roles, built on Spring Boot MVC with Thymeleaf and SQL Server, tested on H2.</p>
+          <ul class="tags">
+            <li>Java</li><li>Spring Boot</li><li>Thymeleaf</li><li>SQL Server</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <div class="project_head">
+            <h3>Student Scam Defense E-Handbook</h3>
+            <span class="badge">Private</span>
+          </div>
+          <p>Interactive e-handbook that helps students recognize common scams (fake tuition payments, job offers, and more), exportable as PDF.</p>
+          <ul class="tags">
+            <li>HTML</li><li>JavaScript</li><li>Python</li>
+          </ul>
+          <div class="project_links">
+            <a href="https://ssg105-ehbook.vercel.app" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project_head">
+            <h3>Fountain Website</h3>
+          </div>
+          <p>Responsive landing page practice project.</p>
+          <ul class="tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+          <div class="project_links">
+            <a href="https://fountainwebsite.vercel.app" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            <a href="https://github.com/khietnn/Fountain_Website" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project_head">
+            <h3>Todo List</h3>
+          </div>
+          <p>Simple task manager in vanilla JavaScript.</p>
+          <ul class="tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+          <div class="project_links">
+            <a href="https://todo-list-eight-sooty.vercel.app" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            <a href="https://github.com/khietnn/TodoList" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------contact------------------------------ -->
+    <section id="contact">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="contact_text">Have a project, an internship opportunity, or just want to say hi? My inbox is open.</p>
+      <a href="mailto:khietnguyenngoc.ttma@gmail.com" class="button start">
+        <i class="fa-solid fa-envelope"></i>
+        khietnguyenngoc.ttma@gmail.com
+      </a>
+    </section>
+
     <footer>
       <div class="social-icon">
-        <a href="https://github.com/NK152448" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/khietnn" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.instagram.com/nng.khiet_06/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.facebook.com/khiet.nguyenngoc.75/" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://x.com/kitehgn" target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
       </div>
       <div class="copyright">
-        copyright &copy;2025; Design by Nguyen Ngoc Khiet
+        copyright &copy;2026; Design by Nguyen Ngoc Khiet
       </div>
     </footer>
   </div>

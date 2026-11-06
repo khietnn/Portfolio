@@ -24,3 +24,17 @@ particlesJS("particles-js", {
     },
   },
 });
+// menu hamburger (màn 1000px): bấm để mở/đóng, bấm vào link thì tự đóng
+const header = document.querySelector("header");
+const bar = document.querySelector(".bar");
+
+function setMenu(open) {
+  header.classList.toggle("open", open);
+  bar.setAttribute("aria-expanded", open);
+  bar.querySelector("i").className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+}
+
+bar.addEventListener("click", () => setMenu(!header.classList.contains("open")));
+document.querySelectorAll("nav a").forEach((link) =>
+  link.addEventListener("click", () => setMenu(false))
+);
