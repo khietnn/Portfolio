@@ -5,6 +5,7 @@ import { GridBackground } from './components/GridBackground'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
+import { Research } from './components/Research'
 import { Skills } from './components/Skills'
 import { gsap, ScrollTrigger, useGSAP, MOTION_OK } from './lib/gsap'
 
@@ -45,6 +46,7 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
+        <Research />
         <Contact />
       </main>
       <Footer />
