@@ -92,11 +92,10 @@ export const research = [
   {
     title: 'An Efficient Unigram-Based Method for Functional and Non-Functional Requirement Classification',
     venue: 'EAI FISAT 2026 · Ho Chi Minh City',
-    status: 'accepted',
+    status: 'accepted · not presented',
     authors: 'Co-authored with lecturer Đỗ Phúc Thịnh (FPT University)',
     summary:
       'Automatically labels software requirements as functional (what the system does) or non-functional (how well it does it). Using single words only, the model keeps about 97% of the best n-gram model’s macro F1 on 6,086 requirements, with a 28× smaller vocabulary and 7.8× faster training.',
-    link: 'https://fisat.eai-conferences.org/2026/',
   },
 ]
 
