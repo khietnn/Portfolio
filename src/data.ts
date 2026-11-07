@@ -9,6 +9,7 @@ export const profile = {
   statement: 'I turn real-world workflows into tools people can actually use.',
   bio: "I'm Nguyen Ngoc Khiet, based in Vietnam. I started with HTML & CSS and grew into full-stack development through university projects and real apps for small businesses. I care about clean structure, tests that matter, and interfaces that feel simple.",
   email: 'khietnguyenngoc.ttma@gmail.com',
+  cv: './CV_NguyenNgocKhiet.pdf', // file nằm trong public/
   facts: [
     { key: 'school', value: 'FPT University' },
     { key: 'major', value: 'Software Engineering' },
@@ -96,6 +97,7 @@ export const projects: Project[] = [
 
 export const socials = [
   { label: 'github', href: 'https://github.com/khietnn' },
+  { label: 'zalo', href: 'https://zalo.me/0833942069' },
   { label: 'instagram', href: 'https://www.instagram.com/nng.khiet_06/' },
   { label: 'facebook', href: 'https://www.facebook.com/khiet.nguyenngoc.75/' },
   { label: 'x', href: 'https://x.com/kitehgn' },

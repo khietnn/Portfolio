@@ -30,6 +30,7 @@ export function Hero() {
         <div data-hero-fade className="mt-9 flex flex-wrap gap-3">
           <a href="#projects" className="btn btn-primary">view --projects</a>
           <a href="#contact" className="btn">contact --me</a>
+          <a href={profile.cv} download className="btn">download --cv</a>
         </div>
       </div>
       <CodeWindow />
