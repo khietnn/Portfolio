@@ -1,0 +1,57 @@
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/inter-tight';
+@import 'tailwindcss';
+
+/* bảng màu + font, dùng trong class Tailwind: bg-bg, text-muted, border-line, text-green... */
+@theme {
+  --color-bg: #0d1117;
+  --color-panel: #161b22;
+  --color-fg: #e6edf3;
+  --color-muted: #8b949e;
+  --color-line: #30363d;
+  --color-green: #7ee787;
+  --color-blue: #79c0ff;
+  --color-orange: #ffa657;
+  --color-pink: #ff7b72;
+  --color-string: #a5d6ff;
+  --font-sans: 'Inter Tight Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+  --animate-blink: blink 1s steps(1) infinite;
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+body {
+  @apply bg-bg text-fg font-sans antialiased;
+}
+::selection {
+  @apply bg-green text-bg;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@layer components {
+  .section {
+    @apply mx-auto max-w-[1400px] px-[6vw] py-24 md:py-32;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-lg border border-line px-[22px] py-3.5 font-mono text-[15px] transition-colors hover:border-green hover:text-green;
+  }
+  .btn-primary {
+    @apply border-green bg-green font-semibold text-bg hover:bg-transparent;
+  }
+  /* lưới nền, chỉ sáng trong vòng tròn quanh con trỏ (--mx, --my do GridBackground cập nhật) */
+  .grid-bg {
+    background-image:
+      linear-gradient(var(--color-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(320px circle at var(--mx, 50%) var(--my, 40%), #000, transparent);
+  }
+}
