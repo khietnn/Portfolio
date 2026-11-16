@@ -9,7 +9,6 @@ export const profile = {
   statement: 'I turn real-world workflows into tools people can actually use.',
   bio: "I'm Nguyen Ngoc Khiet, based in Vietnam. I started with HTML & CSS and grew into full-stack development through university projects and real apps for small businesses. I care about clean structure, tests that matter, and interfaces that feel simple.",
   email: 'khietnguyenngoc.ttma@gmail.com',
-  cv: './CV_NguyenNgocKhiet.pdf', // file nằm trong public/
   facts: [
     { key: 'school', value: 'FPT University' },
     { key: 'major', value: 'Software Engineering' },
